@@ -93,21 +93,71 @@ body{background-color:#eef;}
 .popup{
 	position:absolute; 
 	/*border: 2px solid #ddd; */
-	left:20%; width:60%; top:20%; height:60%;
+	left:10%; width:80%; top:15%; height:70%;
 	background-color:#ddd;
 	padding:5em;
 	border-radius:2em;
 	z-index: 9000;
 }
 
-.popup * { margin-bottom:.5em;}
-.popup h1{text-align: center;font-size:4em;}
-.popup button{text-align: center;}
+.popup h1 { text-align: center; font-size:4em; margin-top:20px; margin-bottom:20px;}
+.popup button{text-align: center; margin-bottom:.5em;}
 .popup .centered {text-align: center;margin:auto;}
-.popup p{font-size:1.4em;}
+.popup p{font-size:1.4em; margin-bottom:.8em;}
 
 .popup .closeButton {float:right;}
 
+#levelMenuPopup {
+    padding:2em;
+    left:10%; width:80%; top:10%; height:80%;
+}
+
+#levelMenuPopup h1 {
+    margin: .2em 0;
+}
+
+#levelList {
+    overflow-y: auto;
+    height: calc(100% - 40px - 4em);
+    text-align: center;
+}
+
+.level-group {
+    /*border: 2px solid #f00;*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+.level-group > div {
+    /*border: 2px solid #00f;*/
+    width: 28em;
+    margin: 2em;
+    padding: 1em;
+    background: #A0B1C9;
+    border-radius:.5em;
+}
+
+.level-group > div > img {
+    width: 19em;
+    padding: 1em;
+    margin: 0.4em;
+}
+
+.level-btn {
+    width: 21em;
+    height: 3em;
+    margin: 0.4em;
+}
+
+.level-btn div {
+    text-align: left;
+}
+
+.difficulty-icon {
+    width: 1.6em;
+    height: 1.6em;
+    margin: 0 0.4em 0 0;
+}
 
 /* ==========================================================================
    Media Queries

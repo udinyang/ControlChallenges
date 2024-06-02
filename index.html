@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		<!--[if lt IE 8]>
-			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
 		<div id="left-coln">
 			<div id="editor" class="bigErrorBox">
 				<form style="position: relative;">
@@ -57,36 +54,22 @@
 		
 		<div id="levelCompletePopup" class="popup">
 			<h1>Level Complete!</h1>
-			<p>You solved the level in <span id="levelSolvedTime"></span> seconds.</p>
 			<div class="centered">
+				<p>You solved the level in <span id="levelSolvedTime"></span> seconds.</p>
 				<button type="button" onclick="showPopup();">OK</button>
 				<button type="button" onclick="showPopup('#levelMenuPopup');"><span class="glyphicon glyphicon-th"> </span>&nbsp;&nbsp;Level menu</button>
 			</div>
 		</div>
 
 		<div id="levelMenuPopup" class="popup">
-			<h1>Select a level</h1>
+			<h1>Select a Level</h1>
 			<div id="levelList" class="centered"></div>
 		</div>
 
 		<div id="tipsPopup" class="popup">
-			
-				<p>You can predict the future of the system by calling simulate(dt, controlFunc) on the model state. Example:</p>
-				
-					<pre>
-// Simulates for 0.5 seconds. The input for the model is set to be the negative of its `x`.
-newState = state.simulate(0.5, function(s){ return -s.x ;})</pre>
-				
-
-				<p>simulate() returns a modified copy of the model state. <br/>
-				The control function will be evaluated only once at the start of a simulate() call <br/>
-				and held constant during the simulation, so choose a small dt.<br/>
-<br/>
-				You can view your own variables by calling `monitor(name,value)`.<br/>
-<br/>
-				If you need to, you can use global variables. <br/>
-				You will have to declare them outside your function with the 'var' keyword.<br/>
-				</p>
+			<p>You can view your own variables by calling:<pre>monitor('name',value);</pre></p>
+			<p>If you need persistent state, you can use global variables. You will have to declare them outside your function with the 'var' keyword.</p>
+			<p>Your code for each level is saved in your browser.</p>
 		</div>
 		
 		<script src="js/jquery-1.11.2.js"></script>
@@ -107,6 +90,7 @@ newState = state.simulate(0.5, function(s){ return -s.x ;})</pre>
 		<script src="js/models/Multirotor.js"></script>
 		<script src="js/models/CruiseControl.js"></script>
 		<script src="js/models/BouncingBallPlatform.js"></script>
+		<script src="js/models/Airplane.js"></script>
 
 		<script src="js/levels/RocketLandingNormal.js"></script>
 		<script src="js/levels/RocketLandingUpsideDown.js"></script>
@@ -129,25 +113,11 @@ newState = state.simulate(0.5, function(s){ return -s.x ;})</pre>
 		<script src="js/levels/BallOnPlatformBalance.js"></script>
 		<script src="js/levels/BallOnPlatformBounce.js"></script>
 		<script src="js/levels/BallOnPlatformEdgeBalance.js"></script>
+		<script src="js/levels/AirplaneIntro.js"></script>
+		<script src="js/levels/AirplaneLanding.js"></script>
 
 		<script src="js/ImageDataCache.js"></script>
 		<script src="js/utils.js"></script>
 		<script src="js/ui.js"></script>
-		
-		<!-- Piwik -->
-		<script type="text/javascript">
-		  var _paq = _paq || [];
-		  _paq.push(['trackPageView']);
-		  _paq.push(['enableLinkTracking']);
-		  (function() {
-		    var u="//janismac.de/piwik/";
-		    _paq.push(['setTrackerUrl', u+'piwik.php']);
-		    _paq.push(['setSiteId', 1]);
-		    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-		    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-		  })();
-		</script>
-		<noscript><p><img src="//janismac.de/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-		<!-- End Piwik Code -->
 	</body>
 </html>
